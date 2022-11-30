@@ -12,7 +12,6 @@
 
 * JetPack:
 	* Lifecycle
-	* ViewModel
 	* ViewBinding
 	* Room database
 	* Navigation Component
