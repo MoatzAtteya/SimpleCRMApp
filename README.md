@@ -1,6 +1,9 @@
 # Features
 * Admin can add customers full data and select which actions will be available for this customer.
-* Any action done by the admin will ber recorded.
+* Any action done by the admin will be recorded.
+
+# Before-Install
+* The Maps API key is not attached to the app, so you need to attach yours to the manifest.
 
 # technologies & Open-source libraries
 * Kotlin mainly, Coroutines together with Flow.
@@ -11,7 +14,7 @@
 	     * ViewModel
 	     * ViewBinding
 	     * Navigation Component
-       * Room database
+       	     * Room database
 
 * Architecture
 		* MVVM (model view view-model).
