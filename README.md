@@ -9,16 +9,18 @@
 * Kotlin mainly, Coroutines together with Flow.
 * Clean Architecture.
 * Dependency injection (Dagger Hilt).
+
 * JetPack:
-	     * Lifecycle
-	     * ViewModel
-	     * ViewBinding
-	     * Navigation Component
-       	     * Room database
+	* Lifecycle
+	* ViewModel
+	* ViewBinding
+	* Room database
+	* Navigation Component
+       	
 
 * Architecture
-		* MVVM (model view view-model).
-		* reposittory pattern.
+	* MVVM (model view view-model).
+	* reposittory pattern.
 
 * [SDP](https://github.com/intuit/sdp) to support different screen sizes.
 * [Glide](https://github.com/bumptech/glide) very easy library to load images or thumnails.
