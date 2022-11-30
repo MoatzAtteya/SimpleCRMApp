@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.customer.add_customer.ui.AddCustomerFirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/arrow_small_left_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/add_customer_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:fontFamily="@font/associate_sans"
+            android:text="@string/add_customer_title"
+            android:textSize="@dimen/_20sdp"
+            app:layout_constraintStart_toEndOf="@id/back_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/customer_profile_img_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_customer_title_tv">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/customer_profile_img_iv"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_65sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/profile_pic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/edit_profile_image_ib"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:background="@drawable/circular_background"
+                android:foreground="?selectableItemBackground"
+                android:src="@drawable/ic_baseline_edit_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/personal_data_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:fontFamily="@font/associate_sans_bold"
+            android:text="Personal Data"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customer_profile_img_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_first_name_til"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/first_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personal_data_title_tv"
+            app:startIconDrawable="@drawable/user_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_first_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?colorOnPrimary"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                android:fontFamily="@font/associate_sans"
+                android:inputType="text"
+                android:maxLength="8"
+                android:padding="10dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_last_name_til"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/last_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_first_name_til"
+            app:startIconDrawable="@drawable/user_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_last_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?colorOnPrimary"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                android:fontFamily="@font/associate_sans"
+                android:maxLength="8"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_email_til"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="Email Address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_last_name_til"
+            app:startIconDrawable="@drawable/email_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_email_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?colorOnPrimary"
+                android:fontFamily="@font/associate_sans"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_phone_number_til"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="Phone Number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_email_til"
+            app:startIconDrawable="@drawable/mobile_icon_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_phone_number_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?colorOnPrimary"
+                android:fontFamily="@font/associate_sans"
+                android:inputType="number"
+                android:padding="10dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/personal_information_save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/button_rounded_background"
+            android:backgroundTint="@color/teal_200"
+            android:fontFamily="@font/associate_sans"
+            android:textColor="@color/white"
+            android:text="Next"
+            android:textSize="@dimen/_14sdp"
+            android:foreground="?selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_phone_number_til" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

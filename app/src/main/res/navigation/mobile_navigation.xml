@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.simplecrm.presentation.home.ui.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_addCustomerFragment"
+            app:destination="@id/addCustomerFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_customerDetailsFragment"
+            app:destination="@id/customerDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_calls"
+        android:name="com.example.simplecrm.presentation.calls.ui.CallsFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_calls" >
+        <action
+            android:id="@+id/action_navigation_calls_to_callingFragment"
+            app:destination="@id/callingFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_records"
+        android:name="com.example.simplecrm.presentation.records.ui.RecordsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_records" />
+    <fragment
+        android:id="@+id/addCustomerFragment"
+        android:name="com.example.simplecrm.presentation.customer.add_customer.ui.AddCustomerFirstFragment"
+        android:label="fragment_add_customer"
+        tools:layout="@layout/fragment_add_customer">
+        <action
+            android:id="@+id/action_addCustomerFragment_to_addCustomerLastFragment"
+            app:destination="@id/addCustomerLastFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCustomerLastFragment"
+        android:name="com.example.simplecrm.presentation.customer.add_customer.ui.AddCustomerLastFragment"
+        android:label="fragment_add_customer_last"
+        tools:layout="@layout/fragment_add_customer_last">
+        <argument
+            android:name="customer"
+            app:argType="com.example.simplecrm.domain.model.Customer" />
+        <action
+            android:id="@+id/action_addCustomerLastFragment_to_selectAddressFragment"
+            app:destination="@id/selectAddressFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectAddressFragment"
+        android:name="com.example.simplecrm.presentation.customer.add_customer.ui.SelectAddressFragment"
+        android:label="fragment_select_address"
+        tools:layout="@layout/fragment_select_address">
+        <argument
+            android:name="customer"
+            app:argType="com.example.simplecrm.domain.model.Customer" />
+        <action
+            android:id="@+id/action_selectAddressFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/customerDetailsFragment"
+        android:name="com.example.simplecrm.presentation.customer.customer_details.ui.CustomerDetailsFragment"
+        android:label="fragment_customer_details"
+        tools:layout="@layout/fragment_customer_details">
+        <argument
+            android:name="customer"
+            app:argType="com.example.simplecrm.domain.model.Customer" />
+        <action
+            android:id="@+id/action_customerDetailsFragment_to_viewAddressFragment"
+            app:destination="@id/viewAddressFragment" />
+        <action
+            android:id="@+id/action_customerDetailsFragment_to_callingFragment"
+            app:destination="@id/callingFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/viewAddressFragment"
+        android:name="com.example.simplecrm.presentation.customer.customer_details.ui.ViewAddressFragment"
+        android:label="fragment_view_address"
+        tools:layout="@layout/fragment_view_address" >
+        <argument
+            android:name="customer"
+            app:argType="com.example.simplecrm.domain.model.Customer" />
+    </fragment>
+    <fragment
+        android:id="@+id/callingFragment"
+        android:name="com.example.simplecrm.presentation.calls.ui.CallingFragment"
+        android:label="fragment_calling"
+        tools:layout="@layout/fragment_calling" >
+        <argument
+            android:name="customer"
+            app:argType="com.example.simplecrm.domain.model.Customer" />
+    </fragment>
+</navigation>

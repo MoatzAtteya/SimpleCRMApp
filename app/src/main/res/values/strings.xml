@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">SimpleCRM</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Calls">Calls</string>
+    <string name="Records">Records</string>
+    <string name="add_customer">Add_Customer</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="add_customer_title">Add Customer</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="company_information">Company Information</string>
+    <string name="company_name">Company Name</string>
+    <string name="select_address">Select Address</string>
+    <string name="customer_name">Name:</string>
+    <string name="company_name2">Company Name:</string>
+    <string name="available_actions">Available actions:</string>
+    <string name="follow_up">Follow-up</string>
+    <string name="visit">Visit</string>
+    <string name="call">Call</string>
+
+    <string name="company_information_text">Company Information: %1$s </string>
+    <string name="action">Action:</string>
+    <string name="action_time">Action Time:</string>
+    <string name="app_splashscreen_title">Customer relationship Management App</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+
+</resources>

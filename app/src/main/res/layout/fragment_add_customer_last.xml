@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.customer.add_customer.ui.AddCustomerLastFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/arrow_small_left_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/add_customer_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:fontFamily="@font/associate_sans"
+            android:text="Add Customer 2/3"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintStart_toEndOf="@id/back_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/company_data_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/associate_sans_bold"
+            android:text="Company Data"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_customer_title_tv" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_company_name_til"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/company_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/company_data_title_tv"
+            app:startIconDrawable="@drawable/building_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_company_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?colorOnPrimary"
+                android:fontFamily="@font/associate_sans"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_company_information_til"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/company_information"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_company_name_til"
+            app:startIconDrawable="@drawable/document_solid">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_company_information_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?colorOnPrimary"
+                android:fontFamily="@font/associate_sans"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/company_phone_number_til"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="Phone Number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_company_information_til"
+            app:startIconDrawable="@drawable/mobile_icon_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/company_phone_number_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?colorOnPrimary"
+                android:fontFamily="@font/associate_sans"
+                android:inputType="number"
+                android:padding="10dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/customer_select_action_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/associate_sans_bold"
+            android:text="Select customer Actions:"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/company_phone_number_til" />
+
+        <TextView
+            android:id="@+id/call_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/button_rounded_background"
+            android:backgroundTint="#C4FDF8"
+            android:drawableEnd="@drawable/phone_call_solid"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/associate_sans"
+            android:padding="@dimen/_10sdp"
+            android:text="Call"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customer_select_action_tv" />
+
+        <TextView
+            android:id="@+id/visit_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/button_rounded_background"
+            android:backgroundTint="#C4FDF8"
+            android:drawableEnd="@drawable/marker_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/associate_sans"
+            android:padding="@dimen/_10sdp"
+            android:text="Visit"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toEndOf="@id/call_action"
+            app:layout_constraintTop_toBottomOf="@+id/customer_select_action_tv" />
+
+        <TextView
+            android:id="@+id/follow_up_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/button_rounded_background"
+            android:backgroundTint="#C4FDF8"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/associate_sans"
+            android:padding="@dimen/_10sdp"
+            android:text="Follow-up"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:drawableEndCompat="@drawable/follow_up"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/visit_action"
+            app:layout_constraintTop_toBottomOf="@+id/customer_select_action_tv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/company_information_save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/button_rounded_background"
+            android:backgroundTint="@color/teal_200"
+            android:fontFamily="@font/associate_sans"
+            android:text="Set Address"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/white"
+            android:foreground="?selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/call_action" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
